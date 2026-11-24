@@ -79,7 +79,7 @@ function validate(value: unknown) {
   const body = value as Record<string, unknown>;
   const allowed = new Set(["model", "messages", "stream", "stream_options", "max_tokens", "temperature", "top_p", "stop", "seed", "n"]);
   if (Object.keys(body).some((key) => !allowed.has(key))) {
-    throw new InputError("Unsupported request field. See the Sova inference API documentation.");
+    throw new InputError("Unsupported request field. See the Clove OS inference API documentation.");
   }
   if (typeof body.model !== "string" || !CATALOG_IDS.has(body.model)) {
     throw new InputError(`model must be one of: ${[...CATALOG_IDS].join(", ")}.`);
@@ -193,7 +193,7 @@ export function createInferenceHandlers(deps: Dependencies = {}) {
     const started = Date.now();
     try {
       if (env.SOVA_INFERENCE_ENABLED !== "true" || !inferenceConfigured(env) || !deps.vllm) {
-        return error("Inference is not enabled. Contact the Sova administrator.", 503, id);
+        return error("Inference is not enabled. Contact the Clove OS administrator.", 503, id);
       }
       // Bound the proxy hop so a hung vLLM server cannot pin the route.
       const signal = AbortSignal.any([request.signal, AbortSignal.timeout(10000)]);
@@ -231,7 +231,7 @@ export function createInferenceHandlers(deps: Dependencies = {}) {
       && (provider === "fireworks" || (provider === "sagemaker" ? Boolean(deps.sagemaker)
         : provider === "vllm" ? Boolean(deps.vllm) : Boolean(deps.bedrock)));
     if (env.SOVA_INFERENCE_ENABLED !== "true" || !configured) {
-      return error("Inference is not enabled. Contact the Sova administrator.", 503, id);
+      return error("Inference is not enabled. Contact the Clove OS administrator.", 503, id);
     }
     if (active >= MAX_ACTIVE) return error("Too many active requests. Retry shortly.", 429, id);
     active++;

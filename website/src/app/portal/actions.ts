@@ -145,7 +145,7 @@ export async function linkKeyAction(
   if (!KEY_PATTERN.test(key)) {
     return {
       status: "error",
-      message: "That key doesn't look right. SOVA keys read sk-sova- plus 48 hex characters.",
+      message: "That key doesn't look right. Clove OS keys read sk-sova- plus 48 hex characters.",
     };
   }
 

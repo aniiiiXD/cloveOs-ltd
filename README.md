@@ -1,49 +1,32 @@
-# Sova / HeavyWork
+# Clove OS
 
-Single project repository: [aniiiiXD/sovaaaaaa](https://github.com/aniiiiXD/sovaaaaaa).
+Clove OS builds and evaluates specialist AI models for deployment on
+infrastructure you control. Start with a real workflow, measure a baseline on
+representative cases, and adapt an open-weight model against those evaluations.
 
-The Sova-branded custom-model market brief is in
-[`Research/rl-post-training-2026-10-31/index.html`](Research/rl-post-training-2026-10-31/index.html).
-Open it directly in a browser; the accompanying research, sources, tweet drafts
-and chart plans live beside it. Its market-size scenarios are illustrative.
+The product includes an OpenAI-compatible inference API, a model catalog, a
+finance workflow demo, and a developer portal for keys and usage.
 
-Five folders, one job each. Work flows one way: Lab → numbers → website.
+## Repository
 
-```
-HeavyWork/
-├── website/    The product. Next.js 16 site — renders the
-│               measured numbers, hosts the API routes that call Bedrock.
-├── backend/    Common infrastructure: AWS/Bedrock serving configs; future
-│               DBs and API services.
-├── Lab/        All ML work:
-│               triage/ (Banking77 specialist, done) and arena/ (FinQA
-│               benchmark, active).
-├── Research/   Papers, research notes, site previews, founder research.
-└── startup/    Operational artifacts (distribution xlsx, workflow proof)
-                and the archive (superseded website-inference-v1).
-```
+| Directory | Contents |
+| --- | --- |
+| [website](website/README.md) | Landing page, demo, API routes, docs, and developer portal |
+| [backend](backend/README.md) | Training and serving infrastructure for AWS, Bedrock, and vLLM |
+| [Lab](Lab/sova-sys1/sova_model/README.md) | Model adaptation, evaluation, and collected experiment results |
+| [Research](Research/rl-post-training-2026-10-31/README.md) | Research notes and the October custom-model market brief |
+| [startup](startup/README.md) | Product planning, distribution records, and the archived website |
 
-## Git ownership
+## Start here
 
-- This root repository includes the source and versioned artifacts from
-  `website/`, `Lab/`, `backend/`, `Research/` and `startup/`, including the
-  archived website.
-- `HeavyWork/.git` is the only project Git directory. All folders are ordinary
-  tracked directories, not nested repositories or submodules. Commit, branch and
-  push from this root; the origin is `git@github.com:aniiiiXD/sovaaaaaa.git`.
-- The former nested Git metadata was moved to a local recovery backup outside
-  the project at `/Users/anixd/Documents/.sova-git-backups/`. It is not published
-  and does not affect this repository. Project source files were left in place.
-- Virtual environments, dependencies, caches, local runtime state and credentials
-  are excluded. Existing model adapters and dataset artifacts are included.
+- Read the [inference API guide](website/docs/inference.md) for the endpoint,
+  supported model IDs, and API key format.
+- Open the [finance demo guide](website/docs/demo.md) for the recorded example,
+  its source data, and the measurements it reports.
+- Read the [legal adaptation report](Lab/sova-sys1/reports/legal-lora-current-run.md)
+  for the ContractNLI development comparison and its coverage limits.
 
-Rig (`Lab/rig/`) is an unexecuted modular post-training/API implementation.
-No training, serving jobs, dependency installations or ML tests were run as part
-of this repository export.
-
-## Rules of the road
-
-- `Lab/build_scoreboard.py` writes into `website/src/app/arena/` — that's
-  the only cross-folder write.
-- Scratch and one-off dumps go to `startup/`, not folder roots.
-- Measured numbers only: what the site claims, Lab's reports prove.
+Versioned source, documentation, and research artifacts live in
+[aniiiiXD/cloveOs-ltd](https://github.com/aniiiiXD/cloveOs-ltd). The
+[website README](website/README.md) documents the Vercel projects and compute approval
+process.

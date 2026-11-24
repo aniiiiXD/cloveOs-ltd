@@ -9,8 +9,8 @@ import PortalLoginForm from "../login-form";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: "SOVA · Sign in",
-  description: "Sign in to the SOVA customer console.",
+  title: "Clove OS · Sign in",
+  description: "Sign in to the Clove OS customer console.",
   robots: { index: false, follow: false },
 };
 
@@ -108,7 +108,7 @@ export default async function PortalLoginPage() {
                 href="/"
                 className="underline-offset-4 transition-colors hover:text-[var(--ink)] hover:underline"
               >
-                Back to sova.dev
+                Back to Clove OS
               </Link>
             </p>
           </div>

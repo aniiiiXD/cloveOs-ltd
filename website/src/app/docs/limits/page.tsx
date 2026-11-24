@@ -6,7 +6,7 @@ import DocsTable from "../docs-table";
 export const metadata: Metadata = {
   title: "Limits",
   description:
-    "Every limit the Sova inference API enforces, in one table: model, messages, tokens, sampling, body size, timeout, and concurrency.",
+    "Every limit the Clove OS inference API enforces, in one table: model, messages, tokens, sampling, body size, timeout, and concurrency.",
 };
 
 const LIMITS: [string, string][] = [
@@ -40,7 +40,7 @@ export default function LimitsPage() {
         <DocsTable head={["Limit", "Value"]} rows={LIMITS} minWidth="560px" />
         <p className="mono mt-6 max-w-2xl text-xs leading-relaxed text-[var(--faint)]">
           Concurrency is per serving instance, enforced by admission control.
-          Sova does not publish per-key rate limits, quotas, pricing, or SLAs in
+          Clove OS does not publish per-key rate limits, quotas, pricing, or SLAs in
           these docs.
         </p>
         <P>

@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 
 // Copies the key id to the clipboard. The key id is not secret (it is the
-// first 8 hex chars of the key's fingerprint) and is what Sova asks for in
+// first 8 hex chars of the key's fingerprint) and is what Clove OS asks for in
 // support conversations. Falls back to a quiet no-op where the clipboard is
 // unavailable (insecure contexts).
 export default function CopyKeyButton({ value }: { value: string }) {

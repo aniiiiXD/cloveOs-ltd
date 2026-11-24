@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { IBM_Plex_Sans, Roboto_Flex, Roboto, Roboto_Mono, Instrument_Serif } from "next/font/google";
+import { BRAND_NAME, SITE_DESCRIPTION, SITE_TITLE } from "@/lib/site";
 import "./globals.css";
 
 const ibmPlexSans = IBM_Plex_Sans({
@@ -36,15 +37,14 @@ const instrumentSerif = Instrument_Serif({
 });
 
 export const metadata: Metadata = {
-  title: "Clove | Own your AI",
-  description:
-    "Financial analysis, engineering, and reasoning through one OpenAI-compatible API. Explore task presets and custom models for your workflow.",
+  title: SITE_TITLE,
+  description: SITE_DESCRIPTION,
+  applicationName: BRAND_NAME,
   metadataBase: new URL("https://www.cloveos.com"),
   openGraph: {
-    title: "Clove | Own your AI",
-    description:
-      "Choose a task. Send a question. Put the answer to work.",
-    siteName: "Clove",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    siteName: BRAND_NAME,
     type: "website",
   },
 };

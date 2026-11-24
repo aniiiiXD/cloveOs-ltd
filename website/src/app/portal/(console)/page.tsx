@@ -14,8 +14,8 @@ import {
 } from "../state";
 
 export const metadata: Metadata = {
-  title: "SOVA · Overview",
-  description: "Your SOVA API usage at a glance: tokens, requests, and latency.",
+  title: "Clove OS · Overview",
+  description: "Your Clove OS API usage at a glance: tokens, requests, and latency.",
 };
 
 function ChartCard({

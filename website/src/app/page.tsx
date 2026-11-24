@@ -7,23 +7,23 @@ import TrainingLoop from "@/components/dojo/TrainingLoop";
 import TaskApis from "@/components/dojo/TaskApis";
 import HomeDemo from "@/components/HomeDemo";
 import ContactForm from "@/components/ContactForm";
-import { BOOKING_URL, PRODUCT_ORIGIN } from "@/lib/site";
+import { BOOKING_URL, BRAND_NAME, PRODUCT_ORIGIN, SITE_DESCRIPTION, SITE_TITLE } from "@/lib/site";
 import { demoAvailability } from "@/lib/serving-config";
 import s from "./dojo.module.css";
 
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: "Clove | Own your AI",
-  description: "Financial analysis, engineering, and reasoning through one OpenAI-compatible API. Explore task presets, example requests, and custom models for your workflow.",
+  title: SITE_TITLE,
+  description: SITE_DESCRIPTION,
   alternates: { canonical: "/" },
   openGraph: {
     url: "/",
-    siteName: "Clove",
+    siteName: BRAND_NAME,
     type: "website",
-    title: "Clove | Own your AI",
-    description: "Choose a task. Send a question. Put the answer to work.",
-    images: [{ url: "/images/sova-dojo-watercolor.png", width: 1672, height: 941, alt: "A watercolor of Clove’s lakeside model dojo" }],
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    images: [{ url: "/images/sova-dojo-watercolor.png", width: 1672, height: 941, alt: "A watercolor of Clove OS’s lakeside model dojo" }],
   },
 };
 
@@ -74,7 +74,7 @@ export default function Home() {
             </div>
             <p className={s.heroOwnership}>One endpoint. Three task presets. OpenAI-compatible.</p>
           </div>
-          <div className={`${s.wrap} ${s.heroBottom}`}><span>Choose the job. Keep your integration simple.</span><a href="#apis" aria-label="Explore Clove task APIs"><Arrow down /></a></div>
+          <div className={`${s.wrap} ${s.heroBottom}`}><span>Choose the job. Keep your integration simple.</span><a href="#apis" aria-label="Explore Clove OS task APIs"><Arrow down /></a></div>
         </section>
 
         <section id="apis" className={`${s.wrap} ${s.apis}`} aria-labelledby="apis-title">
@@ -114,7 +114,7 @@ export default function Home() {
         </section>
 
         <section id="engagements" className={s.engagements} aria-labelledby="engagements-title">
-          <div className={s.wrap}><div className={s.sectionHeading}><div><p className={s.sectionNote}>Work with Clove</p><h2 id="engagements-title">Start with one<br />well-defined problem.</h2></div><p>Bring a workflow and a few real examples. We’ll work out what is worth building, and how to know if it works.</p></div>
+          <div className={s.wrap}><div className={s.sectionHeading}><div><p className={s.sectionNote}>Work with Clove OS</p><h2 id="engagements-title">Start with one<br />well-defined problem.</h2></div><p>Bring a workflow and a few real examples. We’ll work out what is worth building, and how to know if it works.</p></div>
             <div className={s.engagementList}>{[
               { title: "Find the signal", name: "Pilot", body: "Scope one workflow, establish a baseline, and test whether a specialist makes sense.", outcome: "A measured go / no-go." },
               { title: "Build the system", name: "Build", body: "Prepare the data, post-train the model, and integrate a tested endpoint into your stack.", outcome: "A model with a job to do." },
@@ -124,7 +124,7 @@ export default function Home() {
         </section>
 
         <section id="contact" className={`${s.wrap} ${s.contact}`} aria-labelledby="contact-title">
-          <div className={s.contactCopy}><span className={s.contactMark} aria-hidden="true">c</span><p className={s.sectionNote}>Build with Clove</p><h2 id="contact-title">What should your<br />API do?</h2><p>Tell us the task, what a good answer looks like, and where the data needs to stay. We’ll help scope the right API and get you set up.</p><a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className={s.textLink}>Talk through your use case <Arrow /></a></div>
+          <div className={s.contactCopy}><span className={s.contactMark} aria-hidden="true">c</span><p className={s.sectionNote}>Build with Clove OS</p><h2 id="contact-title">What should your<br />API do?</h2><p>Tell us the task, what a good answer looks like, and where the data needs to stay. We’ll help scope the right API and get you set up.</p><a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className={s.textLink}>Talk through your use case <Arrow /></a></div>
           <div className={s.contactForm}><ContactForm /></div>
         </section>
       </main>

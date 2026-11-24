@@ -7,7 +7,7 @@ import Callout from "../../callout";
 export const metadata: Metadata = {
   title: "Models",
   description:
-    "GET /models lists the Sova model catalog: the four model ids your key can call (sova-finance, sova-code, sova-reason, qwen3-4b), each owned_by sova. Requires the same bearer token as chat completions.",
+    "GET /models lists the Clove OS model catalog: the four model ids your key can call (sova-finance, sova-code, sova-reason, qwen3-4b), each owned_by sova. Requires the same bearer token as chat completions.",
 };
 
 // String.raw keeps the shell line continuations literal.
@@ -58,7 +58,7 @@ export default function ModelsPage() {
           lang="json"
           label="200 response body · model catalog"
           code={MODELS_RESPONSE}
-          caption="The list mirrors the Sova model catalog. Deployments served by a vLLM backend proxy the list from the serving server, so it reflects exactly what that server reports."
+          caption="The list mirrors the Clove OS model catalog. Deployments served by a vLLM backend proxy the list from the serving server, so it reflects exactly what that server reports."
         />
         <P>
           A 200 is an OpenAI model list: an <C>object: &quot;list&quot;</C>{" "}

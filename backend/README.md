@@ -1,4 +1,4 @@
-# Backend
+# Clove OS backend
 
 Shared infrastructure common to everything: AWS connections, model serving
 configs, and (as it grows) databases and API services.

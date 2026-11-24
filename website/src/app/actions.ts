@@ -3,6 +3,7 @@
 import { Resend } from "resend";
 
 import type { InquiryState } from "@/lib/inquiry";
+import { BRAND_NAME } from "@/lib/site";
 
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
@@ -26,11 +27,11 @@ export async function sendInquiry(
 
   const apiKey = process.env.RESEND_API_KEY;
   const to = process.env.CONTACT_TO_EMAIL ?? process.env.NOTIFICATION_EMAIL;
-  const from = process.env.CONTACT_FROM_EMAIL ?? "Clove <onboarding@resend.dev>";
+  const from = process.env.CONTACT_FROM_EMAIL ?? `${BRAND_NAME} <onboarding@resend.dev>`;
 
   if (!apiKey || !to) {
     console.error("Contact: email delivery is not configured.");
-    return { status: "error", message: "The form is offline. Email us instead." };
+    return { status: "error", message: "The form is offline. Book a call to get in touch." };
   }
 
   const { error } = await new Resend(apiKey).emails.send({
@@ -38,7 +39,7 @@ export async function sendInquiry(
     to,
     // So hitting reply in the inbox goes straight back to the sender.
     replyTo: email,
-    subject: `Clove enquiry — ${name}`,
+    subject: `${BRAND_NAME} enquiry from ${name}`,
     text: [
       `Name:  ${name}`,
       `Email: ${email}`,

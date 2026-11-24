@@ -1,4 +1,4 @@
-# Startup
+# Clove OS startup
 
 Operational artifacts and the go-to list. Scratch and dumps live here, not
 in folder roots.
@@ -6,7 +6,7 @@ in folder roots.
 ## Go-to stuff to do
 
 **Start here: [`yc-rfs/top-3.html`](yc-rfs/top-3.html)** — the three YC
-RFS (Winter 2027) directions that map to SOVA, each with what we already
+RFS (Winter 2027) directions that map to Clove OS, each with what we already
 have and the next three actions. This is the working action list.
 
 ## Contents

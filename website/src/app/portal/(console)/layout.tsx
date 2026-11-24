@@ -8,9 +8,9 @@ import Sidebar from "../sidebar";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: "SOVA · Customer console",
+  title: "Clove OS · Customer console",
   description:
-    "The SOVA customer console: live tokens, requests, latency, and self-serve API keys.",
+    "The Clove OS customer console: live tokens, requests, latency, and self-serve API keys.",
   robots: { index: false, follow: false },
 };
 

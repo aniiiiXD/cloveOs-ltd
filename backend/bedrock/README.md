@@ -1,4 +1,4 @@
-# Sova Fin-o1 serverless deployment
+# Clove OS Fin-o1 serverless deployment
 
 Target: `TheFinAI/Fin-o1-14B`, revision `bd4b97b8e5f6954c2c6d92da75b6ba4cb948b56d`, original BF16 weights. Its `Qwen3ForCausalLM` architecture and Transformers 4.51.3 configuration match Bedrock's supported import requirements. Bedrock successfully imported this checkpoint.
 

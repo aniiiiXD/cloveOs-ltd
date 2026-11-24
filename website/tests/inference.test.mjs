@@ -35,7 +35,7 @@ test("specialist presets inject their system prompt and echo the catalog id", as
   const response = await api.chat(request({ model: "sova-finance", messages: [{ role: "user", content: "Analyse UPI growth." }] }));
   assert.equal(response.status, 200);
   assert.equal(sent.messages[0].role, "system");
-  assert.match(sent.messages[0].content, /Sova Finance/);
+  assert.match(sent.messages[0].content, /Clove OS Finance/);
   assert.deepEqual(sent.messages[1], { role: "user", content: "Analyse UPI growth." });
   assert.equal((await response.json()).model, "sova-finance");
 });
@@ -50,7 +50,7 @@ test("a customer system message is kept and the preset goes ahead of it", async 
     { role: "system", content: "Answer in Hindi." }, { role: "user", content: "Write a for loop." },
   ] }));
   assert.equal(response.status, 200);
-  assert.match(sent.messages[0].content, /Sova Code/);
+  assert.match(sent.messages[0].content, /Clove OS Code/);
   assert.deepEqual(sent.messages[1], { role: "system", content: "Answer in Hindi." });
 });
 

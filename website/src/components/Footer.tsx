@@ -23,7 +23,7 @@ const COLS: [string, [string, string][]][] = [
     "Firm",
     [
       ["How we work", "/#approach"],
-      ["Why Clove", "/#calls"],
+      ["Why Clove OS", "/#calls"],
       ["About", "/about"],
       ["Careers", "/careers"],
     ],
@@ -32,7 +32,7 @@ const COLS: [string, [string, string][]][] = [
     "Contact",
     [
       ["Book a call", BOOKING_URL],
-      [CONTACT_EMAIL, CONTACT_MAILTO],
+      ...(CONTACT_EMAIL ? [[CONTACT_EMAIL, CONTACT_MAILTO] satisfies [string, string]] : []),
     ],
   ],
 ];
@@ -47,7 +47,7 @@ export default function Footer() {
       <div className="container-x grid gap-10 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
         <div>
           <div className="flex items-baseline gap-2">
-            <span className="font-display text-lg font-semibold text-[var(--ink)]">Clove</span>
+            <span className="font-display text-lg font-semibold text-[var(--ink)]">Clove OS</span>
             <span className="mono text-[0.6rem] tracking-[0.22em] text-[var(--faint)]">SOVEREIGN INFERENCE</span>
           </div>
           <p className="mt-4 max-w-xs text-sm text-[var(--muted)]">
@@ -85,8 +85,8 @@ export default function Footer() {
         ))}
       </div>
       <div className="container-x mt-12 flex flex-col items-start justify-between gap-3 border-t border-[var(--line)] pt-6 sm:flex-row sm:items-center">
-        <p className="mono text-sm text-[var(--muted)]">© 2026 Clove · sovereign inference for the world</p>
-        <p className="mono text-sm text-[var(--muted)]">your data stays yours · no training on client data</p>
+        <p className="mono text-sm text-[var(--muted)]">© 2026 Clove OS · sovereign inference for the world</p>
+        <p className="mono text-sm text-[var(--muted)]">Your data stays yours. Training within the agreed scope.</p>
       </div>
     </footer>
   );

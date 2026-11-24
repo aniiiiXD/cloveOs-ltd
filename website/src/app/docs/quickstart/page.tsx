@@ -8,7 +8,7 @@ import Callout from "../callout";
 export const metadata: Metadata = {
   title: "Quickstart",
   description:
-    "Get a Sova API key, send your first chat completion to qwen3-4b, read the response, and watch your usage at /portal.",
+    "Get a Clove OS API key, send your first chat completion to qwen3-4b, read the response, and watch your usage at /portal.",
 };
 
 // String.raw keeps the shell line continuations literal.

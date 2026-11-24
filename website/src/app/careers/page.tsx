@@ -4,9 +4,9 @@ import Footer from "@/components/Footer";
 import { BOOKING_URL, CONTACT_MAILTO } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Careers · Clove",
+  title: "Careers · Clove OS",
   description:
-    "We hire slowly and only exceptional engineers. Everyone at Clove scopes, builds, and ships to production.",
+    "We hire slowly and only exceptional engineers. Everyone at Clove OS scopes, builds, and ships to production.",
 };
 
 const LOOKING_FOR: [string, string][] = [
@@ -79,8 +79,8 @@ export default function CareersPage() {
             </p>
             {/* Full-width on phones so the CTAs stack cleanly; side by side from sm up. */}
             <div className="mx-auto mt-8 flex w-full max-w-sm flex-col gap-3 sm:max-w-none sm:flex-row sm:flex-wrap sm:justify-center">
-              <a href={`${CONTACT_MAILTO}?subject=Careers`} className="btn btn-primary min-h-[44px] w-full sm:w-auto">
-                Email us
+              <a href={CONTACT_MAILTO ? `${CONTACT_MAILTO}?subject=Careers` : "/#contact"} className="btn btn-primary min-h-[44px] w-full sm:w-auto">
+                {CONTACT_MAILTO ? "Email us" : "Get in touch"}
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M5 12h14M13 6l6 6-6 6" />
                 </svg>

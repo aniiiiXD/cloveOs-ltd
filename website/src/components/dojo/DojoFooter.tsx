@@ -1,19 +1,17 @@
 import Link from "next/link";
-import { BOOKING_URL, CONTACT_EMAIL, CONTACT_MAILTO, PRODUCT_ORIGIN } from "@/lib/site";
+import { BOOKING_URL, BRAND_NAME, CONTACT_EMAIL, CONTACT_MAILTO, PRODUCT_ORIGIN } from "@/lib/site";
 import s from "./Chrome.module.css";
 
 const PRODUCT = [["Explore the APIs", "/#apis"], ["Model catalog", `${PRODUCT_ORIGIN}/models`], ["Demo", "/demo"], ["Documentation", `${PRODUCT_ORIGIN}/docs`], ["Developer portal", `${PRODUCT_ORIGIN}/portal`]] as const;
-const STUDIO = [["About Clove", "/about"], ["Careers", "/careers"], ["Get in touch", "/#contact"]] as const;
+const STUDIO = [["About Clove OS", "/about"], ["Careers", "/careers"], ["Get in touch", "/#contact"]] as const;
 
 export default function DojoFooter() {
-  const publicEmail = CONTACT_EMAIL !== "hello@sova.example" && CONTACT_EMAIL.trim().length > 0;
-
   return (
     <footer className={s.footer}>
       <div className={s.footerInner}>
         <div className={s.footerTop}>
           <div className={s.footerIntro}>
-            <Link href="/#top" className={s.footerBrand} aria-label="Clove home">
+            <Link href="/#top" className={s.footerBrand} aria-label={`${BRAND_NAME} home`}>
               <svg width="42" height="42" viewBox="0 0 44 44" fill="none" aria-hidden="true">
                 <path d="M33.5 8.5A17 17 0 1 0 39 22" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
                 <path d="M13 15.5 22 21l9-5.5-2 12L22 32l-7-4.5-2-12Z" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" />
@@ -32,12 +30,12 @@ export default function DojoFooter() {
           <nav aria-label="Studio links" className={s.footerColumn}>
             <h3>Studio</h3>
             {STUDIO.map(([label, href]) => <Link key={href} href={href}>{label}</Link>)}
-            {publicEmail && <a href={CONTACT_MAILTO}>{CONTACT_EMAIL}</a>}
+            {CONTACT_EMAIL && <a href={CONTACT_MAILTO}>{CONTACT_EMAIL}</a>}
           </nav>
         </div>
-        <div className={s.footerWordmark} aria-hidden="true">Clove</div>
+        <div className={s.footerWordmark} aria-hidden="true">{BRAND_NAME}</div>
         <div className={s.footerBottom}>
-          <p>© {new Date().getFullYear()} Clove</p>
+          <p>© {new Date().getFullYear()} {BRAND_NAME}</p>
           <p>Your data stays yours. Training within the agreed scope.</p>
           <a href="#top">Back to the beginning <span aria-hidden="true">↑</span></a>
         </div>

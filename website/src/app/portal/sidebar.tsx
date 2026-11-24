@@ -60,7 +60,7 @@ export default function Sidebar({ email }: { email: string }) {
             href="/"
             className="display text-[1.65rem] leading-none tracking-[0.06em] text-[var(--ink)]"
           >
-            SOVA
+            Clove OS
           </Link>
           <p className="mono mt-2 text-[0.62rem] uppercase tracking-[0.24em] text-[var(--faint)]">
             Console
@@ -114,7 +114,7 @@ export default function Sidebar({ email }: { email: string }) {
             href="/"
             className="display text-2xl leading-none tracking-[0.06em] text-[var(--ink)]"
           >
-            SOVA
+            Clove OS
           </Link>
           <form action={portalSignOutAction}>
             <button

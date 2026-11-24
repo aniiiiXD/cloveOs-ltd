@@ -11,11 +11,11 @@ import Pager from "./pager";
 // breadcrumb and prev/next pager around the page body.
 export const metadata: Metadata = {
   title: {
-    default: "Sova docs",
-    template: "%s · Sova docs",
+    default: "Clove OS docs",
+    template: "%s · Clove OS docs",
   },
   description:
-    "The Sova inference API: an OpenAI-shaped chat completions endpoint for the Sova model catalog (sova-finance, sova-code, sova-reason, qwen3-4b), with per-key usage metering, streaming on the managed lane, and limits enforced server side.",
+    "The Clove OS inference API: an OpenAI-shaped chat completions endpoint for the Clove OS model catalog (sova-finance, sova-code, sova-reason, qwen3-4b), with per-key usage metering, streaming on the managed lane, and limits enforced server side.",
 };
 
 export default function DocsLayout({ children }: { children: ReactNode }) {

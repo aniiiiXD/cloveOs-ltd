@@ -1,4 +1,4 @@
-# Sova Studio sales demo
+# Clove OS Studio finance demo
 
 Route: `/demo`. A finance-workflow demonstration built on the existing Fin-o1-14B Bedrock endpoint. The homepage navigation links to it.
 
@@ -12,7 +12,7 @@ Both example tabs initially show genuine outputs recorded on 24 October 2026, la
 4. Inspect the generated metrics and summary. The four checks compare numerical fields with predefined expected answers. Citation checks only establish that listed section IDs exist, not that every sentence is supported. Expand the full response if helpful.
 5. Open **Reference brief** to show the prepared target. It is never included in the model prompt. Switch to **Northline Components** to demonstrate negative cash flow if another run is useful.
 6. Use **Your excerpt** for a prospect's authorized sample. Paste text, not a PDF; add section IDs such as `[S1]`. Custom excerpts have no reference answer and are explicitly marked for human review. The maximum is 10,000 UTF-8 bytes.
-7. Export the JSON run report, which includes the source, full task instruction, outputs, token counts, server timing, checks, warm-up timestamp if available, and caveats. **Discuss a pilot** opens the existing Sova booking page.
+7. Export the JSON run report, which includes the source, full task instruction, outputs, token counts, server timing, checks, warm-up timestamp if available, and caveats. **Discuss a pilot** opens the Clove OS booking page.
 
 Suggested talk track: “This is the workflow before customer-specific training. In a pilot, we agree on your quality threshold, evaluate your current system, and test whether a specialized model can meet that threshold with lower latency and cost. Your examples and expert corrections guide the work.”
 

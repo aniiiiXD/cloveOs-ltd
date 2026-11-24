@@ -1,4 +1,4 @@
-# Sova production serving
+# Clove OS production serving
 
 Real production infra for serving open models (Qwen, GLM) as an API.
 Cloud-portable: AWS now (Bedrock later if a lane demands it), the artifact

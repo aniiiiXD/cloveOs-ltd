@@ -8,7 +8,7 @@ const FIELD =
   "mt-2 w-full rounded-lg border border-[var(--line-2)] bg-[var(--paper)] px-3.5 py-3 mono text-base normal-case tracking-normal text-[var(--ink)] placeholder:text-[var(--muted)] focus:border-[var(--pine)]";
 
 /**
- * Claims an operator-issued key (one Sova handed out manually) into the
+ * Claims an operator-issued key (one Clove OS handed out manually) into the
  * signed-in account, so its usage shows up alongside self-serve keys. Same
  * shown-once respect for secrets: the input is a password field and the
  * plaintext is never rendered back.

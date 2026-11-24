@@ -7,7 +7,7 @@ import CodeBlock from "./code-block";
 export const metadata: Metadata = {
   title: "Introduction",
   description:
-    "The Sova inference API: an OpenAI-compatible chat completions endpoint serving the Sova model catalog (sova-finance, sova-code, sova-reason, qwen3-4b) over HTTPS, metered per key, with server-side limits and streaming on the managed lane.",
+    "The Clove OS inference API: an OpenAI-compatible chat completions endpoint serving the Clove OS model catalog (sova-finance, sova-code, sova-reason, qwen3-4b) over HTTPS, metered per key, with server-side limits and streaming on the managed lane.",
 };
 
 const BASE_URL = "https://sova-native.vercel.app/api/v1";
@@ -34,7 +34,7 @@ const CARDS: [string, string, string, string][] = [
   ["Resources", "Errors", "/docs/errors", "One envelope, nine statuses, and when to retry."],
   ["Resources", "Limits", "/docs/limits", "Every number the API enforces, in one table."],
   ["Resources", "Usage & Portal", "/docs/usage", "Per-key metering and your numbers at /portal."],
-  ["Resources", "Models", "/models", "The Sova model catalog: four ids, one OpenAI-compatible endpoint."],
+  ["Resources", "Models", "/models", "The Clove OS model catalog: four ids, one OpenAI-compatible endpoint."],
 ];
 
 const BASE_FACTS: [string, string][] = [
@@ -47,7 +47,7 @@ export default function DocsPage() {
   return (
     <>
       <PageHead
-        eyebrow="Sova inference API · v1"
+        eyebrow="Clove OS inference API · v1"
         title={
           <>
             One endpoint, <span className="text-[var(--signal)]">OpenAI-shaped.</span>
@@ -55,7 +55,7 @@ export default function DocsPage() {
         }
         lead={
           <>
-            The Sova inference API is an OpenAI-compatible chat completions
+            The Clove OS inference API is an OpenAI-compatible chat completions
             endpoint serving the model catalog: <C>sova-finance</C>,{" "}
             <C>sova-code</C>, <C>sova-reason</C>, and the raw <C>qwen3-4b</C>{" "}
             base model. Every request is metered per key, every response
@@ -78,7 +78,7 @@ export default function DocsPage() {
 
       <Section id="quickstart" title="Sixty seconds to a first response">
         <P>
-          Get a key from Sova, export it, and send one request. Store the key in
+          Get a key from Clove OS, export it, and send one request. Store the key in
           an environment variable, never in code.
         </P>
         <CodeBlock lang="bash" label="set your key" code={`export SOVA_API_KEY="sk-sova-..."`} />

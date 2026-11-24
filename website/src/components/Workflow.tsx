@@ -8,7 +8,7 @@ const stages = [
   { label: "Evaluation", title: "Your quality bar", pattern: "eval" },
   { label: "Model selection", title: "The right model", pattern: "search" },
   { label: "Post-training", title: "Adapt to your work", pattern: "train" },
-  { label: "Deployment", title: "Serve with Sova", pattern: "serve" },
+  { label: "Deployment", title: "Serve with Clove OS", pattern: "serve" },
 ];
 
 const steps = [

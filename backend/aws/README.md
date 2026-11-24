@@ -45,7 +45,7 @@ aws sagemaker describe-endpoint --endpoint-name sova-fin-o1-14b-bd4b97b8 --profi
 
 Retain free model/configuration metadata and S3 artifacts for reuse. The script reports elapsed-time cost as an estimate, not an invoice; actual costs must be checked in AWS Billing after usage appears. Never launch AWS and Fireworks GPUs together for this test.
 
-## Sova backend
+## Clove OS backend
 
 The backend supports `SOVA_INFERENCE_PROVIDER=sagemaker`, `AWS_REGION=ap-south-1` and `SAGEMAKER_ENDPOINT=sova-fin-o1-14b-bd4b97b8`. Local development uses `AWS_PROFILE=passkarwado`. Keep `SOVA_INFERENCE_ENABLED=false` until the approved endpoint is healthy.
 

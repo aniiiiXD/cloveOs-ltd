@@ -1,33 +1,32 @@
-# Sova — Product Brief
+# Clove OS product brief
 
-**What:** Brand marketing website for Sova, an AI-native services firm selling **sovereign AI services** — advise, build, and run — on infrastructure the client controls.
+Clove OS builds and evaluates specialist models for deployment on
+infrastructure the customer controls. Start with one workflow and examples of
+what a good answer looks like.
 
-**Audience:** Business buyers (founders, ops/product/engineering leaders) evaluating an AI consultancy. They care about cost per outcome, data sovereignty, and production reliability — not demos.
+## Audience
 
-**Primary conversion goal:** **Book a consult call** (`BOOKING_URL`). Every section routes to it: hero CTAs, featured engagement card, contact form, nav.
+Engineering and product teams evaluating an inference API need a concrete input,
+sample output, and integration contract. Teams with a specialized workflow need
+a measured baseline, a task-specific evaluation, and deployment options.
 
-## Offer (shipped)
-- **The Three Calls** (added 29 Oct 2026): loud top-of-page section mapping
-  SOVA to three YC RFS Winter 2027 directions: Own Your Intelligence,
-  Vertical Foundation Models, AI for the Air-Gapped Economy.
-- **Advise / Build / Run** service cards (Run marked "live").
-- Measured 4-step approach: Evaluate → Select → Adapt → Deploy.
-- Proof by math: cost/accuracy comparison table (specialist vs frontier vs base model).
-- Engagements: Pilot / **Build (featured)** / Run.
+## Product
 
-## Removed (29 Oct 2026, user call: "be on point")
-- Serving tiers section (Shared/Dedicated/Private) — the sovereign story
-  now lives in "The Three Calls" and the demos.
-- Capabilities grid (8 generic workflow cards).
-- "Why SOVA" section — its four points were the YC message restated;
-  folded into The Three Calls.
+- **Inference API.** One OpenAI-compatible chat endpoint with financial
+  analysis, engineering, and reasoning presets. Each preset uses Qwen3-4B with
+  a task-specific system prompt.
+- **Custom models.** Evaluate a baseline, adapt an open-weight model against the
+  workflow, compare quality and serving cost, and deploy into the agreed
+  environment.
+- **Demo and developer portal.** The recorded finance example illustrates the
+  workflow. The portal manages API keys and reports usage.
 
-## Content rules
-- Copy: direct, concrete, numbers-first. No buzzwords. **No em dashes in copy.**
-- Numbers are measured and dated, or explicitly labeled illustrative.
-- The Three Calls statements are commitments, keep them verbatim stable.
+## Site
 
-## Constraints
-- No redesign. Accessibility bug fixes only (AA contrast, 44px targets, focus, reduced motion).
-- Hero Mumbai photo is part of the brand identity — preserve it.
-- No backend/env/asset changes; no e-commerce, auth, or CMS.
+The landing page introduces the API presets and custom-model practice. The model
+catalog and docs give developers the request format and examples. The primary
+conversion is a consultation or access request through `BOOKING_URL`.
+
+Use direct, concrete copy. Label illustrative examples and keep the scope and
+date with measured claims. Describe task presets as configurations of the base
+model. Use `Clove OS` in product copy.

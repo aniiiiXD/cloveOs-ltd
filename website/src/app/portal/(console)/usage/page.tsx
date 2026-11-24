@@ -6,8 +6,8 @@ import { EmptyState, PageHeader, RangeLinks } from "../../ui";
 import { parseModel, parseRange, zeroFillDays, type UsageRow } from "../../state";
 
 export const metadata: Metadata = {
-  title: "SOVA · Usage",
-  description: "Day-by-day SOVA API usage: requests, successes, failures, and tokens.",
+  title: "Clove OS · Usage",
+  description: "Day-by-day Clove OS API usage: requests, successes, failures, and tokens.",
 };
 
 export default async function PortalUsagePage({

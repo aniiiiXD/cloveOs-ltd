@@ -28,7 +28,7 @@ export async function POST(request: Request) {
   if (!warmup && (document.length < 40 || Buffer.byteLength(document) > 10000)) return reply({ error: "Use a financial excerpt between 40 characters and 10,000 UTF-8 bytes." }, 400);
   const baseline = process.env.BEDROCK_DEMO_BASELINE_ID;
   if (kind === "baseline" && !baselineConfigured(baseline)) return reply({ error: "The frontier baseline is not connected for this demo yet." }, 503);
-  if (kind === "specialist" && !demoAvailability(process.env).liveEnabled) return reply({ error: "Live inference is not configured. Contact the Sova administrator." }, 503);
+  if (kind === "specialist" && !demoAvailability(process.env).liveEnabled) return reply({ error: "Live inference is not configured. Contact the Clove OS administrator." }, 503);
   const signal = AbortSignal.any([request.signal, AbortSignal.timeout(240000)]);
   const prompt = warmup ? "Reply with the word ready." : question ? `User question: ${question}\n\nFinancial source:\n${document}` : document;
   const system = warmup ? "Respond briefly." : question ? `${demoInstruction}\nAddress the user's question in the summary while retaining all required financial fields. Use only the financial source as factual evidence.` : demoInstruction;

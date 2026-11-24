@@ -32,7 +32,7 @@ export default function PortalLoginForm() {
           onClick={() => setMode(mode === "signin" ? "signup" : "signin")}
           className="mono text-sm text-[var(--muted)] underline-offset-4 transition-colors hover:text-[var(--ink)] hover:underline"
         >
-          {mode === "signin" ? "New to Sova? Create an account" : "Have an account? Sign in"}
+          {mode === "signin" ? "New to Clove OS? Create an account" : "Have an account? Sign in"}
         </button>
         <a
           href={BOOKING_URL}
@@ -63,7 +63,7 @@ function AuthForm({ mode }: { mode: Mode }) {
         <p className="mt-1.5 text-sm leading-relaxed text-[var(--muted)]">
           {signup
             ? "Email and a password. Your keys and usage hang off the account."
-            : "Sign in with the email and password on your Sova account."}
+            : "Sign in with the email and password on your Clove OS account."}
         </p>
       </div>
 

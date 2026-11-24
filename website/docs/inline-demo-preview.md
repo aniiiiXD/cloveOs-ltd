@@ -8,7 +8,7 @@
 - Live requests use the same source, question and parameters for both connected models. Requests run independently; failures, Stop, timeout and unmount are handled per generation to prevent stale results.
 - Preview environments without live configuration offer a link to the existing live presenter demo. Presenter codes remain in memory and are sent only in the Authorization header.
 - GPT is currently not configured. Its panel says so and its metrics remain blank. No invented GPT answer or comparative performance claim.
-- The recorded Sova speed prominently shows 120 tok/s as a target, not measured. Recorded response time and four calculation checks are evidence-backed. Fresh live runs show actual effective output rate.
+- The recorded specialist speed prominently shows 120 tok/s as a target, not measured. Recorded response time and four calculation checks are evidence-backed. Fresh live runs show actual effective output rate.
 - Existing /api/demo/run now accepts an optional validated question and includes it for both model paths. Older requests without a question retain the original prompt behavior.
 
 ## Verification

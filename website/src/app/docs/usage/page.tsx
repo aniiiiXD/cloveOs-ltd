@@ -6,7 +6,7 @@ import Callout from "../callout";
 export const metadata: Metadata = {
   title: "Usage & Portal",
   description:
-    "Sova meters every request per key. The portal at /portal shows totals, daily traffic, per-model success rate and latency, and self-serve key management at /portal/keys.",
+    "Clove OS meters every request per key. The portal at /portal shows totals, daily traffic, per-model success rate and latency, and self-serve key management at /portal/keys.",
 };
 
 const PORTAL_FACTS = [
@@ -19,7 +19,7 @@ const PORTAL_FACTS = [
 ];
 
 const MANAGE_FACTS = [
-  "Generate a new key at /portal/keys. Like every Sova key, it is shown exactly once, at issue.",
+  "Generate a new key at /portal/keys. Like every Clove OS key, it is shown exactly once, at issue.",
   "Revoke a key you no longer need. It stops authenticating; usage history stays with Sova.",
   "Request-level records are kept for 30 days, which is the deepest window the charts cover.",
 ];

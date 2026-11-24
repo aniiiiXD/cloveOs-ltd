@@ -8,12 +8,12 @@ import Callout from "../callout";
 export const metadata: Metadata = {
   title: "Errors",
   description:
-    "Every Sova API error uses one envelope with message and type. Status codes 400 through 504, what each honestly means, and when to retry.",
+    "Every Clove OS API error uses one envelope with message and type. Status codes 400 through 504, what each honestly means, and when to retry.",
 };
 
 const ENVELOPE = `{
   "error": {
-    "message": "Unsupported request field. See the Sova inference API documentation.",
+    "message": "Unsupported request field. See the Clove OS inference API documentation.",
     "type": "api_error"
   }
 }`;

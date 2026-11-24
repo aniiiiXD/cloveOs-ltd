@@ -8,7 +8,7 @@ import Callout from "../../callout";
 export const metadata: Metadata = {
   title: "Chat Completions",
   description:
-    "POST /chat/completions: the complete request field set for the Sova model catalog, the 128 KiB body limit, curl and Python examples, and the 200 response shape.",
+    "POST /chat/completions: the complete request field set for the Clove OS model catalog, the 128 KiB body limit, curl and Python examples, and the 200 response shape.",
 };
 
 // String.raw keeps the shell line continuations literal.
@@ -135,7 +135,7 @@ export default function ChatCompletionsPage() {
         <P>
           Message rules are strict: 1 to 64 messages, string content only, and
           16,000 UTF-8 bytes of total text across the conversation. The serving
-          lane is chosen by Sova per deployment; you do not select it in the
+          lane is chosen by Clove OS per deployment; you do not select it in the
           request.
         </P>
       </Section>
@@ -174,7 +174,7 @@ export default function ChatCompletionsPage() {
         />
         <P>
           Headers on every response: <C>X-Request-Id</C>, a UUID you can quote
-          back to Sova when something looks wrong, and <C>Cache-Control: no-store</C>{" "}
+          back to Clove OS when something looks wrong, and <C>Cache-Control: no-store</C>{" "}
           so nothing is cached between calls. Error messages describe what to
           fix and never echo prompt text; provider diagnostics are not
           forwarded.

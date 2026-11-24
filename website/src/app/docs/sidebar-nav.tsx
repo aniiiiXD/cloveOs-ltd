@@ -40,7 +40,7 @@ export default function SidebarNav({ variant }: { variant: "sidebar" | "chips" }
   return (
     <nav aria-label="Documentation" className="px-6 py-9">
       <Link href="/docs" className="flex items-baseline gap-2">
-        <span className="font-display text-lg text-[var(--ink)]">Sova</span>
+        <span className="font-display text-lg text-[var(--ink)]">Clove OS</span>
         <span className="mono text-[0.6rem] tracking-[0.22em] text-[var(--faint)]">DOCS</span>
       </Link>
 

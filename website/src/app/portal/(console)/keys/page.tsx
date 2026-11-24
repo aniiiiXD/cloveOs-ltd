@@ -9,8 +9,8 @@ import { PageHeader } from "../../ui";
 import { formatDateUTC, formatDateTimeUTC } from "../../state";
 
 export const metadata: Metadata = {
-  title: "SOVA · API keys",
-  description: "Generate, link, and revoke SOVA API keys on your account.",
+  title: "Clove OS · API keys",
+  description: "Generate, link, and revoke Clove OS API keys on your account.",
 };
 
 export default async function PortalKeysPage() {

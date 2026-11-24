@@ -7,7 +7,7 @@ import Callout from "../callout";
 export const metadata: Metadata = {
   title: "Authentication",
   description:
-    "Sova API keys are sk-sova-<48 hex>, sent as a bearer token, shown once at issue, and stored only as a SHA-256 fingerprint. Manage keys at /portal/keys.",
+    "Clove OS API keys are sk-sova-<48 hex>, sent as a bearer token, shown once at issue, and stored only as a SHA-256 fingerprint. Manage keys at /portal/keys.",
 };
 
 const KEY_FORMAT = `sk-sova-<48 lowercase hex characters>`;
@@ -23,8 +23,8 @@ const ERROR_401 = `{
 
 const AUTH_FACTS = [
   "Shown once. The full key is displayed a single time, at issue. Store it in your secret manager immediately.",
-  "Fingerprint only. Sova stores a SHA-256 fingerprint of the key, never the plaintext. A lost key cannot be recovered, only replaced.",
-  "Safe label. The key id Sova uses in support conversations is the first 8 hex characters of that fingerprint. Sharing it leaks nothing.",
+  "Fingerprint only. Clove OS stores a SHA-256 fingerprint of the key, never the plaintext. A lost key cannot be recovered, only replaced.",
+  "Safe label. The key id Clove OS uses in support conversations is the first 8 hex characters of that fingerprint. Sharing it leaks nothing.",
   "Portal. Sign in at /portal with the key itself to see your usage. The portal is read-only: it reports usage and cannot call models.",
 ];
 
@@ -34,12 +34,12 @@ export default function AuthenticationPage() {
       <PageHead
         eyebrow="API reference"
         title="Authentication"
-        lead="Requests authenticate with an API key sent as a bearer token. Keys are issued by Sova, and every request is metered against the key that made it."
+        lead="Requests authenticate with an API key sent as a bearer token. Keys are issued by Clove OS, and every request is metered against the key that made it."
       />
 
       <Section id="key-format" title="Key format">
         <P>
-          A Sova key is the prefix <C>sk-sova-</C> followed by 48 lowercase hex
+          A Clove OS key is the prefix <C>sk-sova-</C> followed by 48 lowercase hex
           characters. Anything else is rejected.
         </P>
         <CodeBlock lang="text" label="key format" code={KEY_FORMAT} />
@@ -54,7 +54,7 @@ export default function AuthenticationPage() {
         <CodeBlock lang="text" label="authorization header" code={BEARER_HEADER} />
         <Facts items={AUTH_FACTS} />
         <Callout variant="warning" title="A lost key cannot be recovered, only replaced">
-          The plaintext key never lives on Sova servers, only its SHA-256
+          The plaintext key never lives on Clove OS servers, only its SHA-256
           fingerprint. If you lose it, revoke it and generate a new one.
         </Callout>
       </Section>
@@ -70,7 +70,7 @@ export default function AuthenticationPage() {
 
       <Section id="manage" title="Manage your keys">
         <P>
-          Keys are issued by Sova: book a call and we mint one for your
+          Keys are issued by Clove OS: book a call and we mint one for your
           workload. After that, management is self-serve at{" "}
           <Link href="/portal/keys" className="ulink">
             /portal/keys

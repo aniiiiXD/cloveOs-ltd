@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import { BOOKING_URL, PRODUCT_ORIGIN } from "@/lib/site";
+import { BOOKING_URL, BRAND_NAME, PRODUCT_ORIGIN } from "@/lib/site";
 import s from "./Chrome.module.css";
 
 const LINKS = [
@@ -31,14 +31,14 @@ export default function DojoNav() {
   return (
     <header className={s.header}>
       <nav className={s.nav} aria-label="Main navigation">
-        <Link href="/#top" className={s.brand} onClick={() => setOpen(false)} aria-label="Clove home">
+        <Link href="/#top" className={s.brand} onClick={() => setOpen(false)} aria-label={`${BRAND_NAME} home`}>
           <svg className={s.crest} viewBox="0 0 44 44" fill="none" aria-hidden="true">
             <path d="M33.5 8.5A17 17 0 1 0 39 22" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
             <path d="M13 15.5 22 21l9-5.5-2 12L22 32l-7-4.5-2-12Z" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" />
             <path d="m18 22 2 2m6-2-2 2" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
             <circle cx="37.5" cy="11" r="2.3" fill="#8E5B4F" />
           </svg>
-          <span className={s.brandName}>Clove</span>
+          <span className={s.brandName}>{BRAND_NAME}</span>
           <span className={s.brandCaption}>Sovereign<br />intelligence</span>
         </Link>
 

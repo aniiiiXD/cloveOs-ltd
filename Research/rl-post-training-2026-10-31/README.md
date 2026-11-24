@@ -1,6 +1,9 @@
 # Sova custom-model market brief
 
-Open `index.html` in a browser. It is a standalone local page: no build, server, external fonts or JavaScript dependencies are needed. Keep the accompanying Markdown and CSV files next to it for the research links to work. This bundle is versioned in aniiiiXD/sovaaaaaa; a Git push does not establish a live website deployment.
+Open `index.html` in a browser. Keep the accompanying Markdown and CSV files
+next to it for the research links to work. The
+[Clove OS repository](https://github.com/aniiiiXD/cloveOs-ltd) records this
+October research snapshot.
 
 The page includes:
 

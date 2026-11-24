@@ -10,9 +10,9 @@ import CodeBlock from "./code-block";
 // same source the inference API validates against, so the page can never
 // drift from what the endpoint actually accepts.
 export const metadata: Metadata = {
-  title: "Models | SOVA",
+  title: "Models | Clove OS",
   description:
-    "The Sova model catalog: sova-finance, sova-code, sova-reason, and qwen3-4b. Task-specialized models on the sovereign GPU lane, behind one OpenAI-compatible endpoint.",
+    "The Clove OS model catalog: sova-finance, sova-code, sova-reason, and qwen3-4b. Task-specialized models on the sovereign GPU lane, behind one OpenAI-compatible endpoint.",
 };
 
 const ENDPOINT = "https://sova-native.vercel.app/api/v1/chat/completions";
@@ -51,13 +51,13 @@ export default function ModelsPage() {
         <div className="container-x relative pt-28 pb-16 sm:pt-32">
           <p className="eyebrow">
             <span className="signal-dot--calm inline-block h-2 w-2 rounded-full" aria-hidden />
-            Sova inference API · model catalog
+            Clove OS inference API · model catalog
           </p>
           <h1 className="display mt-6 max-w-[20ch] text-[clamp(2.6rem,6.5vw,4.6rem)]">
             The catalog.
           </h1>
           <p className="lead mt-5 max-w-2xl">
-            Task-specialized models on Sova&apos;s sovereign GPU, one
+            Task-specialized models on Clove OS&apos;s sovereign GPU, one
             OpenAI-compatible endpoint.
           </p>
           <p className="mono mt-6 text-sm text-[var(--faint)]">

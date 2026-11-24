@@ -1,4 +1,4 @@
-# Sova inference API
+# Clove OS inference API
 
 **Live in production:** `https://sova-native.vercel.app/api/v1`, model `fin-o1-14b`, provider AWS Bedrock Custom Model Import in `us-east-1`. Authentication uses the existing private `SOVA_API_KEY`. Vercel exchanges its OIDC token for scoped AWS credentials; no AWS access keys were copied into the deployment. JSON and SSE were tested through the exact promoted deployment, and an authenticated request to the main production domain returned HTTP 200 with the correct 25% answer.
 
@@ -21,7 +21,7 @@ Keep these server-only values in the ignored `.env.local` for local development 
 | `SAGEMAKER_ENDPOINT` | For SageMaker: `sova-fin-o1-14b-bd4b97b8`. |
 | `AWS_PROFILE` | Local only: `passkarwado`. Do not set this in Vercel. |
 
-Bedrock uses Vercel OIDC federation when `AWS_ROLE_ARN` is set, or the local AWS SDK credential chain otherwise. Production needs no copied AWS access keys. The prepared IAM role trusts only Sova's production project and can invoke only imported models tagged `SovaService=fin-o1-14b` in this account and region. Administrator setup is complete. SageMaker fallback uses the standard SDK credential chain. All providers retain the same caller key and API contract.
+Bedrock uses Vercel OIDC federation when `AWS_ROLE_ARN` is set, or the local AWS SDK credential chain otherwise. Production needs no copied AWS access keys. The prepared IAM role trusts only the Clove OS production project and can invoke only imported models tagged `SovaService=fin-o1-14b` in this account and region. Administrator setup is complete. SageMaker fallback uses the standard SDK credential chain. All providers retain the same caller key and API contract.
 
 The Hugging Face token is used for weight downloads only and is not needed in Vercel. Update environment values and redeploy when enabling/disabling the API or rotating keys. Deleting the Fireworks deployment stops GPU billing independently of Vercel.
 
@@ -40,7 +40,7 @@ curl https://sova-native.vercel.app/api/v1/chat/completions \
   --no-buffer
 ```
 
-OpenAI-compatible clients can use this base URL with the Sova key and model alias. Only the documented text-chat subset is supported; tools, images, Responses API, and arbitrary model routing are not implemented. Responses preserve provider reasoning fields, usage and finish reasons. Bedrock responses use the `fin-o1-14b` alias and convert AWS EventStream JSON chunks to SSE; Fireworks and SageMaker pass their response bodies through. No reasoning mode is overridden.
+OpenAI-compatible clients can use this base URL with a Clove OS API key and model alias. Only the documented text-chat subset is supported; tools, images, Responses API, and arbitrary model routing are not implemented. Responses preserve provider reasoning fields, usage and finish reasons. Bedrock responses use the `fin-o1-14b` alias and convert AWS EventStream JSON chunks to SSE; Fireworks and SageMaker pass their response bodies through. No reasoning mode is overridden.
 
 Supported fields: `model`, `messages`, `stream`, `stream_options.include_usage`, `max_tokens`, `temperature`, `top_p`, `stop`, `seed`, `n=1`. Messages accept only `role` (`system`, `user`, `assistant`) and string `content`. Unknown fields are rejected.
 

@@ -90,7 +90,7 @@ export default function TaskApis() {
 
   return (
     <div className={s.explorer}>
-      <div role="tablist" aria-label="Explore Clove task APIs" className={s.tabs}>
+      <div role="tablist" aria-label="Explore Clove OS task APIs" className={s.tabs}>
         {TASKS.map((task, index) => <button
           key={task.model}
           type="button"

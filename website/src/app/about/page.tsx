@@ -4,9 +4,9 @@ import Footer from "@/components/Footer";
 import { BOOKING_URL, CONTACT_MAILTO } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "About · Clove",
+  title: "About · Clove OS",
   description:
-    "Clove is a small, senior team of IIT engineers turning traditional companies into new-age, AI-native ones.",
+    "Clove OS is a small, senior team of IIT engineers turning traditional companies into new-age, AI-native ones.",
 };
 
 const PRINCIPLES: [string, string][] = [
@@ -27,14 +27,14 @@ export default function AboutPage() {
         <div className="container-x relative max-w-3xl">
           <p className="eyebrow">
             <span className="signal-dot" aria-hidden />
-            About Clove
+            About Clove OS
           </p>
           <h1 className="display mt-6 text-[clamp(2.4rem,5vw,3.8rem)]">
             We&apos;re the team that makes AI actually{" "}
             <span className="text-[var(--signal)]">ship.</span>
           </h1>
           <p className="lead mt-7">
-            Clove is a small, senior team of IIT engineers. We started it because
+            Clove OS is a small, senior team of IIT engineers. We started it because
             we kept seeing the same thing: a company gets a shiny AI demo, then
             nothing reaches production. The pilot dies, the budget is gone, and how
             the business actually works never changes.
@@ -84,8 +84,8 @@ export default function AboutPage() {
                   <path d="M5 12h14M13 6l6 6-6 6" />
                 </svg>
               </a>
-              <a href={CONTACT_MAILTO} className="btn btn-ghost min-h-[44px] w-full sm:w-auto">
-                Email us
+              <a href={CONTACT_MAILTO || "/#contact"} className="btn btn-ghost min-h-[44px] w-full sm:w-auto">
+                {CONTACT_MAILTO ? "Email us" : "Get in touch"}
               </a>
             </div>
           </div>
